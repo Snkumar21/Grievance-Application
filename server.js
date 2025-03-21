@@ -12,10 +12,10 @@ const app = express();
 
 // MySQL Database Connection
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || "localhost",   
+    host: process.env.DB_HOST || "localhost",
     user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "Snkumar30",
-    database: process.env.DB_NAME || "grievance_system",
+    password: process.env.DB_PASSWORD || "DB_Password",
+    database: process.env.DB_NAME || "DB_Name",
 });
 
 db.connect(err => {
@@ -47,8 +47,8 @@ const verifyToken = (req, res, next) => {
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: process.env.EMAIL_USER || "snkumar6926@gmail.com",
-        pass: process.env.EMAIL_PASS || "fimb vpam ranv gjyt"
+        user: process.env.EMAIL_USER || "your_email-id@gmail.com",
+        pass: process.env.EMAIL_PASS || "your_password"
     }
 });
 
